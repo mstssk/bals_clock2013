@@ -1,0 +1,11 @@
+{
+  "name": "bals-clock2013",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve docs"
+  },
+  "dependencies": {
+    "@mstssk/serve": "latest"
+  }
+}

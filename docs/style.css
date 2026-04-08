@@ -1,0 +1,312 @@
+body{
+	background: #0b73d7;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.bg img{
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+}
+
+div.bg img.cloud {
+	transform: scale(0.26) translate(0%, -90%);
+}
+
+div.bg img:nth-child(2) {
+	transform: scale(0.26) translate(-20%, -90%);
+	animation: slide-first 480s 1 linear, slide-loop 960s 140s infinite linear;
+}
+
+div.bg img:nth-child(3) {
+	transform: scale(0.26) translate(0%, 20%);
+	animation: slide-first 400s 1 linear, slide-loop 800s 140s infinite linear;
+}
+
+div.bg img:nth-child(4) {
+	transform: scale(0.26) translate(-170%, -20%);
+	animation: slide-first 400s 1 linear, slide-loop 800s 400s infinite linear;
+}
+
+div.bg img:nth-child(5) {
+	transform: scale(0.26) translate(-160%, 100%);
+	animation: slide-first 480s 1 linear, slide-loop 960s 480s infinite linear;
+}
+
+div.bg {
+	min-height: 100%;
+	min-width: 800px;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+@media screen and (max-width: 800px){
+	div.bg {
+		left: 50%;
+		margin-left: -400px;
+	}
+}
+
+#fg {
+	background: white;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#fg.fadein{
+	animation: fadein 3s 1;
+}
+
+#container {
+	position: relative;
+}
+
+#castle_container{
+	position: fixed;
+	top: 70px;
+	left: 100px;
+}
+
+#ornithopter{
+	margin-top: 100px;
+	position: fixed;
+	animation: flying-ornithopter 60s 1, flying-up-down 5s infinite;
+}
+
+#family{
+	margin-top: 100px;
+	position: fixed;
+}
+#family.flying{
+	animation: flying-family 60s 1, flying-up-down 5s infinite linear;
+}
+
+#castle{
+	position: fixed;
+	transform: rotate(-5deg);
+	animation: move 60s infinite;
+}
+
+#particles img{
+	margin-top: 80px;
+	margin-left: 100px;
+	position: fixed;
+	animation: fall-down 60s infinite linear;
+}
+#particles img:nth-child(1){
+	left: 40px;
+}
+#particles img:nth-child(2){
+	left: 45px;
+	animation-delay: 3s;
+}
+#particles img:nth-child(3){
+	left: 38px;
+	animation-delay: 7s;
+}
+#particles img:nth-child(4){
+	left: 65px;
+	animation-delay: 11s;
+}
+#particles img:nth-child(5){
+	left: 34px;
+	animation-delay: 16s;
+}
+#particles img:nth-child(6){
+	left: 55px;
+	animation-delay: 19s;
+}
+#particles img:nth-child(7){
+	left: 38px;
+	animation-delay: 23s;
+}
+#particles img:nth-child(8){
+	left: 60px;
+	animation-delay: 27s;
+}
+#particles img:nth-child(9){
+	left: 45px;
+	animation-delay: 31s;
+}
+#particles img:nth-child(10){
+	left: 30px;
+	animation-delay: 36s;
+}
+
+#megaa{
+	position: fixed;
+}
+
+#castle.falldown{
+	animation: fall-down 60s 4s infinite linear;
+}
+#megaa.falldown{
+	animation: fall-down 50s infinite linear;
+}
+
+#effect{
+	animation: blink 0.25s infinite;
+}
+
+#wall{
+	background:url(./img/wall.png) no-repeat;
+	width: 480px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -240px;
+	margin-top: 10%;
+
+	animation: move 20s infinite linear;
+}
+
+#text_finished{
+	background:url(./img/text_finished.png) no-repeat;
+	height: 24px;
+	width: 273px;
+	margin: 140px 105px;
+	padding-top: 48px;
+}
+
+#text{
+	background:url(./img/text_base.png) no-repeat;
+	height: 70px;
+	width: 260px;
+	margin: 120px 120px;
+	padding-top: 48px;
+}
+#text img{
+	width: 14px;
+}
+#hh{
+	margin-left: 40px;
+}
+#mm{
+	margin-left: 47px;
+}
+#ss{
+	margin-left: 23px;
+}
+
+#footer{
+	width: 100%;
+	position: fixed;
+	bottom: 5px;
+}
+#footer p{
+	font-size: small;
+	padding: 0px;
+	margin: 3px;
+	margin-right: 25px
+}
+#footer p.left{
+	float: left;
+}
+#footer p.right{
+	float: right;
+	text-align: right;
+}
+
+div.tweet {
+	margin: 5px;
+}
+
+/** Animations **/
+@keyframes fadein{
+	from{
+		background: white;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	to{
+		background: transparent;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}
+@keyframes move{
+	50%{
+		transform: translate(0px, 20px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
+@keyframes slide-first{
+	from{
+		left: 0%;
+	}
+	to{
+		left: 115%;
+	}
+}
+@keyframes slide-loop{
+	from{
+		left: -115%;
+	}
+	to{
+		left: 115%;
+	}
+}
+@keyframes flying-ornithopter{
+	from{
+		left: 100%;
+	}
+	to{
+		left: 140px;
+		transform: scale(0.3);
+	}
+}
+@keyframes flying-family{
+	from{
+		left: 140px;
+		transform: scale(0.3);
+	}
+	to{
+		left: 100%;
+	}
+}
+@keyframes flying-up-down{
+	from{
+		top: -10px;
+	}
+	50%{
+		top: 10px;
+	}
+	to{
+		top: -10px;
+	}
+}
+@keyframes fall-down{
+	from{
+		top: 100px;
+	}
+	50%{
+		padding-left: 10px;
+	}
+	to{
+		top: 1000px;
+		transform: rotate(90deg);
+	}
+}
+@keyframes blink{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0.7;
+	}
+}
